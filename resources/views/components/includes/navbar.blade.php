@@ -13,7 +13,7 @@
             <span>Admin</span>
           </div>
         </div>
-            <x-includes.adminnav />
+            <x-includes.navlink />
       </nav>
     </div>
     <!-- Sidebar End -->
