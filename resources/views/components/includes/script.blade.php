@@ -12,4 +12,4 @@
     
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
-    <script src="{{ asset('js/recent-table.js') }}"></script>
+    <script src="{{ asset('js/customer-table.js') }}"></script>
