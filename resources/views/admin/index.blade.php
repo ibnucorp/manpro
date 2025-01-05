@@ -3,7 +3,8 @@
 @section('content')
       <div class="container-fluid px-4">
         <div class="row g-4 my-3">
-            <h2>Dashboard</h2>
+          <h2>Dashboard</h2>
+          <hr>
           <div class="col-sm-12 col-xl-6">
                 <div class="bg-light text-center rounded p-4 h-100">
                   <div class="d-flex align-items-center justify-content-between mb-4x">
@@ -23,8 +24,9 @@
                 </div>
           </div>
         </div>
-        <div class="row g-4 my-4">
-          <h3>Hari Ini</h3>
+        <h3 class="mt-5">Hari Ini</h3>
+        <hr>
+        <div class="row g-4 mb-4" style="height: 800px">
           <div class="col-sm-12 col-xl-6">
               <div class="container">
                 <div class="bg-light text-center rounded p-4 h-100">
@@ -113,7 +115,7 @@
               <div class="container">
                 <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Multiple Bar Chart</h6>
-                            <canvas id="worldwide-sales" class="w-100" style="display: block; box-sizing: border-box; height: 550px;"></canvas>
+                            <canvas id="worldwide-sales" class="w-100" style="display: block; box-sizing: border-box;"></canvas>
                         </div>
               </div>
           </div>

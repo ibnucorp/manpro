@@ -1,6 +1,6 @@
 <x-includes.head /> 
 <body class="bg-dark text-light">
-    <div id="page1" class="d-flex align-items-center justify-content-center vh-100">
+    <div id="page1" class="d-flex align-items-center justify-content-center vh-100 my-5">
         <div class="bg-secondary text-light rounded shadow p-4" style="max-width: 400px;">
             <h3 class="text-center my-5">SELAMAT DATANG! Di Pempek Cek Ina</h3>
             <form id="queueForm">
@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <div id="page2" class="d-flex align-items-center justify-content-center vh-100 d-none">
+    <div id="page2" class="d-flex align-items-center justify-content-center vh-100 my-5 d-none">
         <div class="bg-light text-dark rounded shadow p-4" style="max-width: 400px;">
             <div class="container">
                 <div class="row text-center border border-1 border-dark rounded mb-5">
@@ -71,7 +71,6 @@
             </div>
         </div>
     </div>
-
 
     <script>
         let selectedGender = null;
