@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->id();
             $table->string('nama');
             $table->integer('nomor_antri')->unique();
-            $table->enum('gender', ['Pria', 'Perempuan']);
+            $table->enum('gender', ['Pria', 'Wanita']);
             $table->enum('jenis_antrian', ['Makan di Tempat', 'Bungkus']);
             $table->timestamps();
         });

@@ -15,4 +15,14 @@ class CustomerController extends Controller
     {
         $customer = Customer::create($request);
     }
+
+    public function destroy($id)
+    {
+        // Find and delete the customer
+        $customer = Customer::findOrFail($id);
+        $customer->delete();
+
+        // Redirect back with a success message
+        return redirect()->back();
+    }
 }

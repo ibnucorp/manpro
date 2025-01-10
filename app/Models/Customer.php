@@ -13,5 +13,5 @@ class Customer extends Model
     protected $table = 'customers';
 
     // Kolom yang dapat diisi
-    protected $fillable = ['nama', 'nomor_antri', 'gender', 'jenis_antrian'];
+    protected $fillable = ['nama', 'gender', 'jenis_antrian', 'nomor_antri'];
 }

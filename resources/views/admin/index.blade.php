@@ -27,97 +27,43 @@
         <h3 class="mt-5">Hari Ini</h3>
         <hr>
         <div class="row g-4 mb-4" style="height: 800px">
-          <div class="col-sm-12 col-xl-6">
-              <div class="container">
+          <div class="col-sm-12 col-xl-12">
+            <div class="container">
                 <div class="bg-light text-center rounded p-4 h-100">
-                  <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h6 class="mb-0">Recent Customer</h6>
-                    <a href="">Show All</a>
-                  </div>
-                  <div class="container">
-                    <table id="recent" class="table table-striped text-middle align-middle table-bordered table-hover mb-0">
-                      <thead>
-                        <tr class="text-dark">
-                          <th scope="col">Date</th>
-                          <th scope="col">Nama</th>
-                          <th scope="col">Nomor</th>
-                          <th scope="col">Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>01 Jan 2045</td>
-                          <td>Jhon Doe</td>
-                          <td>$123</td>
-                          <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                          <td>01 Jan 2045</td>
-                          <td>Jhon Doe</td>
-                          <td>$123</td>
-                          <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                          <td>01 Jan 2045</td>
-                          <td>Jhon Doe</td>
-                          <td>$123</td>
-                          <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                          <td>01 Jan 2045</td>
-                          <td>Jhon Doe</td>
-                          <td>$123</td>
-                          <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                          <td>01 Jan 2045</td>
-                          <td>Jhon Doe</td>
-                          <td>$123</td>
-                          <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                          <td>01 Jan 2045</td>
-                          <td>Jhon Doe</td>
-                          <td>$123</td>
-                          <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                          <td>01 Jan 2045</td>
-                          <td>Jhon Doe</td>
-                          <td>$123</td>
-                          <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                          <td>01 Jan 2045</td>
-                          <td>Jhon Doe</td>
-                          <td>$123</td>
-                          <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                          <td>01 Jan 2045</td>
-                          <td>Jhon Doe</td>
-                          <td>$123</td>
-                          <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                          <td>01 Jan 2045</td>
-                          <td>Jhon Doe</td>
-                          <td>$123</td>
-                          <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">Recent Customers</h6>
+                        <a href="">Show All</a>
+                    </div>
+                    <div class="container">
+                        <table id="recent" class="table table-striped text-middle align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-dark">
+                                    <th scope="col" data-order="desc">Nomor Antri</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Jenis Antrian</th>
+                                    <th scope="col">Jam</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse ($customers as $customer)
+                                    <tr>
+                                        <td>{{ $customer->nomor_antri }}</td>
+                                        <td>{{ $customer->nama }}</td>
+                                        <td>{{ $customer->gender }}</td>
+                                        <td>{{ $customer->jenis_antrian }}</td>
+                                        <td>{{ $customer->created_at->format('H:i') }}</td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="5" class="text-center">No recent customers found.</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-              </div>
-          </div>
-            <div class="col-sm-12 col-xl-6">
-              <div class="container">
-                <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Multiple Bar Chart</h6>
-                            <canvas id="worldwide-sales" class="w-100" style="display: block; box-sizing: border-box;"></canvas>
-                        </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
